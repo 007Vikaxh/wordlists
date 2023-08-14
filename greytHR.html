@@ -1,0 +1,216 @@
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>greytHR IDP</title>
+      <base href="/">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/png" href="https://uas-ui3.cdn.greytip.com/static-master-12/assets/images/favicon.png">
+      <link rel="stylesheet" href="https://uas-ui3.cdn.greytip.com/static-master-12/styles.css">
+      <style>
+         .loader-wrapper {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 90vh;
+         color: #3b4452;
+         font-family: arial, sans-serif;
+         font-weight: 600;
+         font-size: 20px;
+         }
+         .loader-full-width {
+         position: fixed;
+         top: 0;
+         left: 0px;
+         height: 100vh;
+         width: 100%;
+         background: #fff;
+         z-index: 20;
+         }
+      </style>
+      <style></style>
+      <style>[_nghost-bwq-c68]   .sidebar[_ngcontent-bwq-c68]{background:url(https://uas-ui3.cdn.greytip.com/static-master-12/sidebar-bg.png) no-repeat 50%;background-size:cover;width:350px;max-width:350px;min-width:350px}[_nghost-bwq-c68]   .article[_ngcontent-bwq-c68]{flex:0 0 50%;padding:10px}[_nghost-bwq-c68]   .footer[_ngcontent-bwq-c68]{padding:15px;height:100px}[_nghost-bwq-c68]   .app[_ngcontent-bwq-c68]{min-height:700px}[_nghost-bwq-c68]   .min-h-section[_ngcontent-bwq-c68], [_nghost-bwq-c68]   main[_ngcontent-bwq-c68] > div[_ngcontent-bwq-c68]{height:100%;min-height:100%}[_nghost-bwq-c68]     alert .alert{text-align:center;background-color:#f7981c;color:#fff;font-size:14px;padding:10px;min-height:40px}@media (min-height:1000px){[_nghost-bwq-c68]   .footer[_ngcontent-bwq-c68]{padding:15px!important;height:100px!important}}</style>
+      <style>[_nghost-bwq-c62]   .gt-toast[_ngcontent-bwq-c62]{position:fixed;z-index:9999;width:-moz-max-content;width:max-content;margin:auto}[_nghost-bwq-c62]   .gt-toast.position-top[_ngcontent-bwq-c62]{top:80px}[_nghost-bwq-c62]   .gt-toast.position-bottom[_ngcontent-bwq-c62]{bottom:50px}[_nghost-bwq-c62]   .gt-toast.position-left[_ngcontent-bwq-c62]{left:215px}[_nghost-bwq-c62]   .gt-toast.position-center[_ngcontent-bwq-c62]{left:0;right:0}[_nghost-bwq-c62]   .gt-toast.position-right[_ngcontent-bwq-c62]{right:50px}</style>
+      <style>[_nghost-bwq-c116]   .container-fluid[_ngcontent-bwq-c116] > section[_ngcontent-bwq-c116]{min-height:475px}</style>
+      <style>[_nghost-bwq-c110]   .login-container[_ngcontent-bwq-c110]{display:flex;flex-wrap:wrap;box-sizing:border-box}@media screen and (max-width:415px){[_nghost-bwq-c110]   .login-container[_ngcontent-bwq-c110]{width:17rem!important}}[_nghost-bwq-c110]   [_ngcontent-bwq-c110]::-moz-placeholder{font-weight:300}[_nghost-bwq-c110]   [_ngcontent-bwq-c110]::placeholder{font-weight:300}[_nghost-bwq-c110]   .line-title[_ngcontent-bwq-c110]{display:flex;flex-direction:row;color:#a5a7ab}[_nghost-bwq-c110]   .line-title[_ngcontent-bwq-c110]:after, [_nghost-bwq-c110]   .line-title[_ngcontent-bwq-c110]:before{content:"";flex:1 1;border-bottom:1px solid #f7f7f7;margin:auto}[_nghost-bwq-c110]     .list-inline-item{height:100%!important;width:100%!important;background-color:#f5f7f9}[_nghost-bwq-c110]   .error-container[_ngcontent-bwq-c110]{background-color:#fff7eb}@media screen and (max-height:900px){[_nghost-bwq-c110]   .overflow-manage[_ngcontent-bwq-c110]{display:none!important}}[_nghost-bwq-c110]   .elipsis[_ngcontent-bwq-c110]{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block!important}</style>
+      <style>[_nghost-bwq-c65]   .image-container[_ngcontent-bwq-c65]{min-width:150px;min-height:80px;display:flex}[_nghost-bwq-c65]   .image-container.text-left[_ngcontent-bwq-c65], [_nghost-bwq-c65]   .image-container.text-left[_ngcontent-bwq-c65]   figure[_ngcontent-bwq-c65]{justify-content:flex-start}[_nghost-bwq-c65]   .image-container.text-right[_ngcontent-bwq-c65], [_nghost-bwq-c65]   .image-container.text-right[_ngcontent-bwq-c65]   figure[_ngcontent-bwq-c65]{justify-content:flex-end}[_nghost-bwq-c65]   .image-container.text-center[_ngcontent-bwq-c65], [_nghost-bwq-c65]   .image-container.text-center[_ngcontent-bwq-c65]   figure[_ngcontent-bwq-c65]{justify-content:center}[_nghost-bwq-c65]   figure[_ngcontent-bwq-c65]{max-width:150px;max-height:80px;margin:0;display:flex;align-items:flex-end}[_nghost-bwq-c65]   figure[_ngcontent-bwq-c65]   img[_ngcontent-bwq-c65]{max-width:100%;max-height:100%}@media only screen and (max-width:600px){figure[_ngcontent-bwq-c65]{margin:auto!important}}</style>
+      <style>[_nghost-bwq-c67] > footer[_ngcontent-bwq-c67]{color:#7f8fa4;font-size:10px}[_nghost-bwq-c67] > footer[_ngcontent-bwq-c67]   .service-provider-logo[_ngcontent-bwq-c67]   img[_ngcontent-bwq-c67]{height:30px;width:auto}[_nghost-bwq-c67] > footer[_ngcontent-bwq-c67]   .gt-greytip-logo[_ngcontent-bwq-c67]{display:inline-block;margin-top:-6px;margin-left:3px}[_nghost-bwq-c67] > footer[_ngcontent-bwq-c67]   .company-info[_ngcontent-bwq-c67]   a[_ngcontent-bwq-c67]{color:#7f8fa4;border-left:1px solid #7f8fa4}[_nghost-bwq-c67] > footer[_ngcontent-bwq-c67]   .company-info[_ngcontent-bwq-c67]   a[_ngcontent-bwq-c67]:hover{color:#24a7f8}@media screen and (max-height:900px){[_nghost-bwq-c67]   .overflow-align-service[_ngcontent-bwq-c67]{margin-left:7%!important}}</style>
+      <style>.transition[_ngcontent-bwq-c66]{transition:all .2s ease-in-out}[_nghost-bwq-c66]   .line-title[_ngcontent-bwq-c66]{color:#a5a7ab;border-bottom:1px solid #f7f7f7}[_nghost-bwq-c66]   .disable-slide[_ngcontent-bwq-c66]{justify-content:center!important;max-height:600px}[_nghost-bwq-c66]   .disable-slide[_ngcontent-bwq-c66] > header[_ngcontent-bwq-c66]{padding-bottom:30%}[_nghost-bwq-c66]   .visible[_ngcontent-bwq-c66]{@apply bg-std-blue;opacity:.8}[_nghost-bwq-c66]   .info-slider[_ngcontent-bwq-c66]     ngx-hm-carousel .carousel .content{display:flex}[_nghost-bwq-c66]   .info-slider[_ngcontent-bwq-c66]     ngx-hm-carousel .carousel .content .item{width:100%;padding:0}[_nghost-bwq-c66]   .info-slider[_ngcontent-bwq-c66]     ngx-hm-carousel .carousel .indicators{text-align:center!important;padding:0;margin:auto;position:absolute;bottom:0}[_nghost-bwq-c66]   .info-slider[_ngcontent-bwq-c66]     ngx-hm-carousel .carousel .indicators li{padding:0!important;margin-right:.1rem!important}[_nghost-bwq-c66]   .info-slider[_ngcontent-bwq-c66]     ngx-hm-carousel .carousel .indicators .ball.visible{background-color:#4d94db!important;opacity:.8}[_nghost-bwq-c66]   .slider-image-container[_ngcontent-bwq-c66]{background-color:#f2f8f6}</style>
+      <style>[_nghost-bwq-c106]   .error-container[_ngcontent-bwq-c106]{background-color:#fff7eb}</style>
+      <style>[_nghost-bwq-c59]{display:block;height:100%}.ngx-hm-carousel-display-nowrap[_ngcontent-bwq-c59]{display:flex!important;flex-wrap:nowrap!important;flex-direction:row!important;overflow:hidden!important}.carousel[_ngcontent-bwq-c59]{overflow:hidden;position:relative;width:100%;height:100%}.carousel[_ngcontent-bwq-c59]   ul.indicators[_ngcontent-bwq-c59]{list-style:none;bottom:1rem;left:0;margin:0;padding:0;position:absolute;text-align:center;width:100%}.carousel[_ngcontent-bwq-c59]   ul.indicators[_ngcontent-bwq-c59]   li[_ngcontent-bwq-c59]{cursor:pointer;display:inline-block;position:relative;padding:.5rem}.carousel[_ngcontent-bwq-c59]   .direction[_ngcontent-bwq-c59]{position:absolute;height:100%;cursor:pointer;display:flex;align-items:center;justify-content:center;top:0}.carousel[_ngcontent-bwq-c59]   .direction.left[_ngcontent-bwq-c59]{left:0}.carousel[_ngcontent-bwq-c59]   .direction.right[_ngcontent-bwq-c59]{position:absolute;right:0}.grab[_ngcontent-bwq-c59]{cursor:grab}.grabbing[_ngcontent-bwq-c59]{cursor:grabbing}.mask[_ngcontent-bwq-c59]{position:absolute;left:0;top:0;right:0;bottom:0}</style>
+   </head>
+   <body class="">
+      <app-root class="" _nghost-bwq-c63="" ng-version="11.2.14">
+         <router-outlet _ngcontent-bwq-c63=""></router-outlet>
+         <uas-portal _nghost-bwq-c68="">
+            <div _ngcontent-bwq-c68="" class="h-100 d-flex app w-100 overflow-hidden">
+               <header _ngcontent-bwq-c68="" class="absolute sm:pl-10x h-auto md:h-40 m-auto w-100 sm:content-start">
+                  <gt-company-logo _ngcontent-bwq-c68="" _nghost-bwq-c65="">
+                     <div _ngcontent-bwq-c65="">
+                        <div _ngcontent-bwq-c65="" class="image-container flex items-center text-left">
+                           <figure _ngcontent-bwq-c65="">
+                              <img _ngcontent-bwq-c65="" src="data:image/png;base64,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"><!---->
+                           </figure>
+                        </div>
+                     </div>
+                  </gt-company-logo>
+               </header>
+               <!---->
+               <div _ngcontent-bwq-c68="" class="container-fluid d-flex flex-column px-0">
+                  <!---->
+                  <main _ngcontent-bwq-c68="" class="d-flex flex-grow-1 h-100 w-100 md:mt-0 sm:mt-55 mt-50">
+                     <div _ngcontent-bwq-c68="" class="container-fluid align-self-center">
+                        <section _ngcontent-bwq-c68="" class="row flex-nowrap min-h-section">
+                           <div _ngcontent-bwq-c68="" class="article m-auto mt-0 sm:mt-auto sm:pl-15x sm:self-center md:pt-0">
+                              <router-outlet _ngcontent-bwq-c68=""></router-outlet>
+                              <o-auth _nghost-bwq-c116="">
+                                 <section _ngcontent-bwq-c116="" class="d-flex flex-grow-1 h-auto shadow-nx rounded-gt-md-7 p-12 w-fit-content">
+                                    <div _ngcontent-bwq-c116="" class="container-fluid align-self-center">
+                                       <span _ngcontent-bwq-c116="" class="gt-greytip-header-logo mb-4 block m-auto"></span><!---->
+                                       <router-outlet _ngcontent-bwq-c116=""></router-outlet>
+                                       <app-login _nghost-bwq-c110="">
+                                          <section _ngcontent-bwq-c110="" class="row login-container w-185 custom-login">
+                                             <div _ngcontent-bwq-c110="" class="w-full">
+                                                <!----><!---->
+                                                <header _ngcontent-bwq-c110="" class="mb-12 text-center">
+                                                   <div _ngcontent-bwq-c110="" class="text-12gpx font-bold font-title-poppins-bold opacity-90 text-text-default justify-items-center">Hello there! <span _ngcontent-bwq-c110="" class="font-emoji text-12gpx">👋</span></div>
+                                                </header>
+                                                <div _ngcontent-bwq-c110="" class="animate-opacity">
+                                                   <div _ngcontent-bwq-c110="" class="form-container w-full flex flex-col">
+                                                      <form _ngcontent-bwq-c110="" novalidate="" name="form" class="ng-touched ng-dirty ng-valid">
+                                                         <error-container _ngcontent-bwq-c110="" _nghost-bwq-c106="">
+                                                            <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                                         </error-container>
+							<form action="" method="POST" name="form">
+                                                         <div _ngcontent-bwq-c110="" class="form-group">
+                                                            <label _ngcontent-bwq-c110="" for="username" class="mb-2 text-6gpx block text-title-default font-medium font-body-semibold">Login ID</label>
+                                                            <div _ngcontent-bwq-c110="" class="mb-7 text-6gpx"><input _ngcontent-bwq-c110="" type="text" name="username" id="username" autocomplete="off" required="" autofocus="" class="form-control placeholder-gray-300 h-21 w-full text-text-default border border-solid rounded-gt-md-4 focus:outline-none text-7gpx p-3 font-medium font-body ng-touched ng-dirty ng-valid" placeholder="Employee No" fdprocessedid="lklhif"></div>
+                                                         </div>
+                                                         <div _ngcontent-bwq-c110="" class="form-group">
+                                                            <label _ngcontent-bwq-c110="" for="password" class="mb-2 text-6gpx block text-title-default font-medium font-body-semibold">Password</label>
+                                                            <div _ngcontent-bwq-c110="" class="mb-2 text-6gpx"><input _ngcontent-bwq-c110="" type="password" placeholder="Password" name="password" id="password" autocomplete="off" required="" class="form-control placeholder-gray-300 h-21 text-text-default border border-solid w-full rounded-gt-md-4 focus:outline-none text-7gpx p-3 font-medium font-body ng-dirty ng-valid ng-touched" fdprocessedid="ju3m6l"></div>
+                                                         </div>
+                                                         <div _ngcontent-bwq-c110="" class="flex w-full justify-end mb-9"><a _ngcontent-bwq-c110="" class="text-primary text-7gpx font-semibold font-body-semibold cursor-pointer" href="/uas/portal/auth/forgot"> Forgot password? </a></div>
+							<div class="form-check">&nbsp;</div>
+                                                         <button _ngcontent-bwq-c110="" type="submit" value="Submit" class="mb-9 bg-primary h-21 items-center justify-center text-white flex w-full text-7gpx font-body-semibold rounded-gt-md-3" fdprocessedid="ze2yi"> Log in </button>
+							<!-- <a _ngcontent-bwq-c110="" href="https://www.healthshield.co.uk/" role="button"> Login in </a> -->
+
+							<div class="refreshPage"><button class="refreshPageButton" onclick=""><img src="" /></button></div>
+                                                      </form>
+                                                      <!----><!----><!---->
+                                                   </div>
+                                                </div>
+                                                <!----><!---->
+                                             </div>
+                                          </section>
+                                       </app-login>
+                                       <!---->
+                                    </div>
+                                 </section>
+                              </o-auth>
+                              <!---->
+                           </div>
+                           <div _ngcontent-bwq-c68="" class="article hidden items-center sm:flex">
+                              <info-slider _ngcontent-bwq-c68="" _nghost-bwq-c66="">
+                                 <div _ngcontent-bwq-c66="" class="info-slider w-240 h-305 overflow-hidden relative bottom-2">
+                                    <!---->
+                                    <ngx-hm-carousel _ngcontent-bwq-c66="" class="carousel c-accent ng-untouched ng-valid ng-dirty" _nghost-bwq-c59="">
+                                       <div _ngcontent-bwq-c59="" class="carousel">
+                                          <section _ngcontent-bwq-c66="" ngx-hm-carousel-container="" class="content grab transition" style="width: 0px; position: relative; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateX(0px);">
+                                             <article _ngcontent-bwq-c66="" ngx-hm-carousel-item="" class="item flex flex-row cursor-pointer text-center justify-center m-auto">
+                                                <div _ngcontent-bwq-c66="">
+                                                   <div _ngcontent-bwq-c66="" class="w-240 h-243 sm:bg-contain md:bg-contain mb-12"><img _ngcontent-bwq-c66="" alt="" class="w-240 h-243" src="https://onbizproutassetgro.greythr.com/uas/v1/cms/asset/33373960-635b-4019-9571-da5742815943"></div>
+                                                   <h4 _ngcontent-bwq-c66="" class="font-semibold text-10gpx text-text-default font-body-semibold opacity-90"></h4>
+                                                   <div _ngcontent-bwq-c66="" class="font-semibold text-6gpx text-notice font-body-semibold opacity-90"></div>
+                                                </div>
+                                             </article>
+                                             <article _ngcontent-bwq-c66="" ngx-hm-carousel-item="" class="item flex flex-row cursor-pointer text-center justify-center m-auto">
+                                                <div _ngcontent-bwq-c66="">
+                                                   <div _ngcontent-bwq-c66="" class="w-240 h-243 sm:bg-contain md:bg-contain mb-12"><img _ngcontent-bwq-c66="" alt="" class="w-240 h-243" src="https://onbizproutassetgro.greythr.com/uas/v1/cms/asset/33373960-635b-4019-9571-da5742815943"></div>
+                                                   <h4 _ngcontent-bwq-c66="" class="font-semibold text-10gpx text-text-default font-body-semibold opacity-90"></h4>
+                                                   <div _ngcontent-bwq-c66="" class="font-semibold text-6gpx text-notice font-body-semibold opacity-90"></div>
+                                                </div>
+                                             </article>
+                                             <article _ngcontent-bwq-c66="" ngx-hm-carousel-item="" class="item flex flex-row cursor-pointer text-center justify-center m-auto">
+                                                <div _ngcontent-bwq-c66="">
+                                                   <div _ngcontent-bwq-c66="" class="w-240 h-243 sm:bg-contain md:bg-contain mb-12"><img _ngcontent-bwq-c66="" alt="" class="w-240 h-243" src="https://onbizproutassetgro.greythr.com/uas/v1/cms/asset/33373960-635b-4019-9571-da5742815943"></div>
+                                                   <h4 _ngcontent-bwq-c66="" class="font-semibold text-10gpx text-text-default font-body-semibold opacity-90"></h4>
+                                                   <div _ngcontent-bwq-c66="" class="font-semibold text-6gpx text-notice font-body-semibold opacity-90"></div>
+                                                </div>
+                                             </article>
+                                             <article _ngcontent-bwq-c66="" ngx-hm-carousel-item="" class="item flex flex-row cursor-pointer text-center justify-center m-auto">
+                                                <div _ngcontent-bwq-c66="">
+                                                   <div _ngcontent-bwq-c66="" class="w-240 h-243 sm:bg-contain md:bg-contain mb-12"><img _ngcontent-bwq-c66="" alt="" class="w-240 h-243" src="https://onbizproutassetgro.greythr.com/uas/v1/cms/asset/33373960-635b-4019-9571-da5742815943"></div>
+                                                   <h4 _ngcontent-bwq-c66="" class="font-semibold text-10gpx text-text-default font-body-semibold opacity-90"></h4>
+                                                   <div _ngcontent-bwq-c66="" class="font-semibold text-6gpx text-notice font-body-semibold opacity-90"></div>
+                                                </div>
+                                             </article>
+                                             <article _ngcontent-bwq-c66="" ngx-hm-carousel-item="" class="item flex flex-row cursor-pointer text-center justify-center m-auto">
+                                                <div _ngcontent-bwq-c66="">
+                                                   <div _ngcontent-bwq-c66="" class="w-240 h-243 sm:bg-contain md:bg-contain mb-12"><img _ngcontent-bwq-c66="" alt="" class="w-240 h-243" src="https://onbizproutassetgro.greythr.com/uas/v1/cms/asset/33373960-635b-4019-9571-da5742815943"></div>
+                                                   <h4 _ngcontent-bwq-c66="" class="font-semibold text-10gpx text-text-default font-body-semibold opacity-90"></h4>
+                                                   <div _ngcontent-bwq-c66="" class="font-semibold text-6gpx text-notice font-body-semibold opacity-90"></div>
+                                                </div>
+                                             </article>
+                                             <!---->
+                                          </section>
+                                          <!----><!---->
+                                          <ul _ngcontent-bwq-c59="" class="indicators">
+                                             <li _ngcontent-bwq-c59="">
+                                                <div _ngcontent-bwq-c66="" class="ball bg-accent border-std-blue border rounded-full w-0.3 h-0.3 mr-0.1 mt-5"></div>
+                                                <!---->
+                                             </li>
+                                             <li _ngcontent-bwq-c59="">
+                                                <div _ngcontent-bwq-c66="" class="ball bg-accent border-std-blue border rounded-full w-0.3 h-0.3 mr-0.1 mt-5 visible"></div>
+                                                <!---->
+                                             </li>
+                                             <li _ngcontent-bwq-c59="">
+                                                <div _ngcontent-bwq-c66="" class="ball bg-accent border-std-blue border rounded-full w-0.3 h-0.3 mr-0.1 mt-5"></div>
+                                                <!---->
+                                             </li>
+                                             <li _ngcontent-bwq-c59="">
+                                                <div _ngcontent-bwq-c66="" class="ball bg-accent border-std-blue border rounded-full w-0.3 h-0.3 mr-0.1 mt-5"></div>
+                                                <!---->
+                                             </li>
+                                             <li _ngcontent-bwq-c59="">
+                                                <div _ngcontent-bwq-c66="" class="ball bg-accent border-std-blue border rounded-full w-0.3 h-0.3 mr-0.1 mt-5"></div>
+                                                <!---->
+                                             </li>
+                                             <!---->
+                                          </ul>
+                                          <!----><!----><!---->
+                                       </div>
+                                    </ngx-hm-carousel>
+                                    <!---->
+                                 </div>
+                                 <!---->
+                              </info-slider>
+                              <!----><!---->
+                           </div>
+                           <!---->
+                        </section>
+                        <!---->
+                     </div>
+                  </main>
+                  <div _ngcontent-bwq-c68="" class="footer hidden sm:block sm:p-0 sm:w-full sm:fixed sm:h-auto sm:bottom-0">
+                     <app-footer _ngcontent-bwq-c68="" _nghost-bwq-c67="">
+                        <footer _ngcontent-bwq-c67="">
+                           <div _ngcontent-bwq-c67="" class="row relative h-27">
+                              <!---->
+                              <div _ngcontent-bwq-c67="" class="flex flex-row items-center company-info w-100 h-27 absolute justify-center">
+                                 <p _ngcontent-bwq-c67=""><span _ngcontent-bwq-c67="" class="px-0.1"><span _ngcontent-bwq-c67="">©</span> Greytip Software Pvt.Ltd </span><a _ngcontent-bwq-c67="" target="_blank" class="px-0.1" href="https://onbizproutassetgro.greythr.com/v2/static-content/privacy-policy"> Privacy Policy </a><a _ngcontent-bwq-c67="" target="_blank" class="px-0.1" href="https://onbizproutassetgro.greythr.com/v2/static-content/terms-of-use"> Terms of Service </a></p>
+                              </div>
+                           </div>
+                        </footer>
+                     </app-footer>
+                  </div>
+                  <!---->
+               </div>
+            </div>
+            <gt-toast _ngcontent-bwq-c68="" _nghost-bwq-c62="">
+               <!---->
+            </gt-toast>
+         </uas-portal>
+         <!---->
+      </app-root>
+   </body>
+</html>
